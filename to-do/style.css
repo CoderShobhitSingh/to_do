@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    height: 500px;
+    width: 450px;
+    background: #fff;
+    border: 5px solid black;
+    border-radius: 10px;
+
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#input-box {
+    padding-left: 5px;
+    width: 15rem;
+    height: 1.5rem;
+    outline: none;
+    font-size: 1.05rem;
+}
+
+button {
+    width: 5rem;
+    height: 1.7rem;
+    color: red;
+}
+
+#list-item {
+    max-height: 400px;
+    list-style: none; 
+    
+}
+
+ul li {
+    list-style: none;
+    font-size: 15px;
+    padding: 12px 8px 10px 70px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+ul li::before {
+    content: ' ';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 40px;
+}
+
+ul li.checked {
+    color: #3d3d3d;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 28px;
+    height: 50px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    border-radius: 50%;
+    padding: 0 60px 0 0;
+    overflow-y: auto;
+}
+
+@media (max-width:600px) {
+    body {
+        overflow: hidden;
+    }
+
+    .box {
+        height: 500px;
+        width: 300px;
+    }
+
+    #input-box {
+        width: 12rem;
+        height: 1.5rem;
+        outline: none;
+        font-size: 1.05rem;
+    }
+
+    button {
+        width: 3rem;
+        height: 1.7rem;
+        color: red;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    ul li span {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        color: #555;
+        line-height: 40px;
+        border-radius: 50%;
+        padding: 0 60px 0 0;
+        overflow-y: auto;
+    }
+
+    ul li {
+        list-style: none;
+        font-size: 15px;
+        padding: 15px 8px 10px 50px;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        overflow-y: scroll;
+        word-wrap: break-word;
+
+    }
+
+    ul li::before {
+        left: 20px;
+        top: 14px;
+    }
+
+    ul li span {
+        position: absolute;
+        right: 0;
+        top: 5px;
+        width: 30px;
+        height: 50px;
+        font-size: 22px;
+        color: #555;
+        line-height: 40px;
+        border-radius: 50%;
+        padding: 0 60px 0 0;
+        overflow-y: auto;
+    }
+
+
+}
